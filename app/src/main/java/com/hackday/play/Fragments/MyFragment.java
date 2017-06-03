@@ -72,24 +72,24 @@ public class MyFragment extends Fragment implements View.OnClickListener {
             case 0:
             case R.id.info_tab1: {
                 tab1.setBackgroundColor(getResources().getColor(R.color.TabSelected));
-                tab2.setBackgroundColor(getResources().getColor(R.color.White));
-                tab3.setBackgroundColor(getResources().getColor(R.color.White));
+                tab2.setBackgroundColor(getResources().getColor(R.color.white));
+                tab3.setBackgroundColor(getResources().getColor(R.color.white));
                 viewPager.setCurrentItem(0);
                 break;
             }
             case 1:
             case R.id.info_tab2: {
                 tab2.setBackgroundColor(getResources().getColor(R.color.TabSelected));
-                tab1.setBackgroundColor(getResources().getColor(R.color.White));
-                tab3.setBackgroundColor(getResources().getColor(R.color.White));
+                tab1.setBackgroundColor(getResources().getColor(R.color.white));
+                tab3.setBackgroundColor(getResources().getColor(R.color.white));
                 viewPager.setCurrentItem(1);
                 break;
             }
             case 2:
             case R.id.info_tab3: {
                 tab3.setBackgroundColor(getResources().getColor(R.color.TabSelected));
-                tab2.setBackgroundColor(getResources().getColor(R.color.White));
-                tab1.setBackgroundColor(getResources().getColor(R.color.White));
+                tab2.setBackgroundColor(getResources().getColor(R.color.white));
+                tab1.setBackgroundColor(getResources().getColor(R.color.white));
                 viewPager.setCurrentItem(2);
                 break;
             }

@@ -18,41 +18,56 @@
         android:layout_gravity="center"
         android:background="#AAA" />
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
 
-        <ImageView
-            android:id="@+id/center_boy_img"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_centerHorizontal="true"
-            android:background="#AAA" />
+        <RelativeLayout
+            android:id="@+id/activity_add_RelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/center_boy_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerHorizontal="true"
+                android:background="#AAA" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="28dp"
+                android:layout_toLeftOf="@id/center_boy_img"
+                android:background="#AAA" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="28dp"
+                android:layout_toRightOf="@id/center_boy_img"
+                android:background="#AAA" />
+        </RelativeLayout>
 
         <ImageView
+            android:id="@+id/activity_add_sex"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_gravity="center"
-            android:layout_marginRight="28dp"
-            android:layout_toLeftOf="@id/center_boy_img"
-            android:background="#AAA" />
-
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="28dp"
-            android:layout_toRightOf="@id/center_boy_img"
-            android:background="#AAA" />
-    </RelativeLayout>
+            android:background="#AAA"
+            android:visibility="visible" />
+    </FrameLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:gravity="center"
-        android:text="湖北武汉\n华中科技大学"
+        android:text="你在哪儿呢？"
         android:textColor="@color/black" />
 
     <ImageView
@@ -63,19 +78,38 @@
         android:background="#AAA" />
 
     <TextView
+        android:id="@+id/activity_add_time"
+        android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:gravity="center" />
+        android:gravity="center"
+        android:text="10分钟" />
 
-    <EditText
-        android:layout_width="264dp"
-        android:layout_height="64dp"
-        android:layout_gravity="center"
-        android:hint="可以随便写两句话，大概在100字以内"
-        android:textSize="12sp" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/activity_add_EditText"
+            android:layout_width="264dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:hint="可以随便写两句话，大概在100字以内"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/activity_add_TextView"
+            android:layout_width="264dp"
+            android:layout_height="64dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:visibility="visible" />
+    </FrameLayout>
 
     <Button
+        android:id="@+id/activity_add_Button"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="184dp"
         android:layout_height="48dp"
