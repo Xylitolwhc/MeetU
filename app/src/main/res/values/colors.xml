@@ -3,5 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="FontColorDefault">#000</color>
+    <color name="FontColorDefault">#6AAFE6</color>
+    <color name="MessageBoy">#8EC0E4</color>
+    <color name="MessageGirl">#FFA7BE</color>
+    <color name="MessageSecret">#A88EE4</color>
+    <color name="black">#000</color>
+    <color name="TabSelected">#6AAFE6</color>
+    <color name="White">#FFFFFF</color>
 </resources>

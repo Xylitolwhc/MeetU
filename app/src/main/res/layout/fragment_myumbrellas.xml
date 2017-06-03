@@ -19,9 +19,11 @@
             android:orientation="horizontal">
 
             <RelativeLayout
+                android:id="@+id/info_tab1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:background="@color/TabSelected">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -32,6 +34,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/info_tab2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
@@ -45,6 +48,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/info_tab3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
