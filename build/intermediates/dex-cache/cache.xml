@@ -25,7 +25,11 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
+<<<<<<< HEAD
         sha1="77169d5d25ede63bd48e189578f4c7a4f57b1a32">
+=======
+        sha1="fb067781abeacd2c744d92dd26015d4386ee9402">
+>>>>>>> master
         <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_43aa978047cb539679bd81741b645998b40d637d/classes.dex" />
     </item>
 
