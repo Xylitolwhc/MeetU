@@ -78,6 +78,7 @@
         android:src="@drawable/iconplace32" />
 
     <TextView
+        android:id="@+id/where_are_you"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -122,10 +123,10 @@
             android:layout_width="264dp"
             android:layout_height="64dp"
             android:layout_gravity="center"
-            android:textSize="12sp"
-            android:text="ta什么都没说哦"
             android:gravity="center"
+            android:text="ta什么都没说哦"
             android:textColor="@color/white"
+            android:textSize="12sp"
             android:visibility="visible" />
     </FrameLayout>
 
@@ -141,15 +142,16 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@drawable/button_middle"
-            android:visibility="invisible"
-            android:text="点击求伞OvO" />
+            android:text="点击求伞OvO"
+            android:visibility="invisible" />
 
         <LinearLayout
+            android:id="@+id/activity_add_ButtonLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:id="@+id/activity_add_ButtonLayout"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
+
             <Button
                 android:id="@+id/activity_add_Button_Meet"
                 style="@style/Widget.AppCompat.Button.Borderless"
@@ -158,8 +160,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/button_middle"
-                android:textColor="@color/TabSelected"
-                android:text="碰面啦" />
+                android:text="碰面啦"
+                android:textColor="@color/TabSelected" />
 
             <Button
                 android:id="@+id/activity_add_Button_Cancel"
@@ -169,8 +171,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/addunder"
-                android:textColor="@color/MessageBoy"
-                android:text="放弃" />
+                android:text="放弃"
+                android:textColor="@color/MessageBoy" />
         </LinearLayout>
     </FrameLayout>
 </LinearLayout>

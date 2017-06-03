@@ -18,8 +18,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hackday.play.Utils.LocationInfor;
+import com.hackday.play.Utils.Utils;
+import com.hackday.play.View.PickerView;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by wuhanson on 2017/6/3.
@@ -28,7 +32,7 @@ import java.util.Date;
 public class EditUmbrellaActivity extends Activity {
     private LocationInfor locationInfor;
     private EditText editText;
-    private TextView textView, time;
+    private TextView textView, time, where;
     private Button button, cancelButton, meetButton;
     private RelativeLayout relativeLayout;
     private ImageView addboy, addgirl, addsecret, clock, titleImg, back;
@@ -38,7 +42,9 @@ public class EditUmbrellaActivity extends Activity {
     private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            super.handleMessage(msg);
+            if (msg.what == 0x123) {
+                where.setText(locationInfor.getSpecific_infor());
+            }
         }
     };
 
@@ -54,6 +60,7 @@ public class EditUmbrellaActivity extends Activity {
         time = (TextView) findViewById(R.id.activity_add_time);
         addboy = (ImageView) findViewById(R.id.center_boy_img);
         addgirl = (ImageView) findViewById(R.id.activity_add_addgirl);
+        where = (TextView) findViewById(R.id.where_are_you);
         addsecret = (ImageView) findViewById(R.id.activity_add_addsecret);
         titleImg = (ImageView) findViewById(R.id.activity_add_Title_ImageView);
         backgroung = (LinearLayout) findViewById(R.id.activity_add_background);
@@ -64,10 +71,12 @@ public class EditUmbrellaActivity extends Activity {
         meetButton = (Button) findViewById(R.id.activity_add_Button_Meet);
 
         init();
+        InitEvent();
     }
 
     private void init() {
         locationInfor = MyApplication.getLocationInfor();
+        Utils.getLocation(locationInfor, handler);
         mode = getIntent().getIntExtra("Mode", 0);
         if (mode == 0) {//编辑、发布模式
             textView.setVisibility(View.GONE);
@@ -151,16 +160,16 @@ public class EditUmbrellaActivity extends Activity {
             });
             if (locationInfor.getId() == MyApplication.getId()) {
                 button.setVisibility(View.GONE);
-                switch(1){
-                    case 1:{
+                switch (1) {
+                    case 1: {
                         buttonLayout.setVisibility(View.GONE);
                         break;
                     }
-                    case 2:{
+                    case 2: {
                         meetButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent intent=new Intent();
+                                Intent intent = new Intent();
                             }
                         });
                         cancelButton.setOnClickListener(new View.OnClickListener() {
@@ -171,7 +180,7 @@ public class EditUmbrellaActivity extends Activity {
                         });
                         break;
                     }
-                    case 3:{
+                    case 3: {
                         meetButton.setText("修改");
                         meetButton.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -255,4 +264,36 @@ public class EditUmbrellaActivity extends Activity {
         });
         dialog.show();
     }
+
+    private void InitEvent() {
+        time.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                List<String> data = new ArrayList<String>();
+                data.add("5分钟");
+                data.add("10分钟");
+                data.add("15分钟");
+                data.add("20分钟");
+                data.add("30分钟");
+                data.add("1小时");
+                data.add("2小时");
+                View view = getLayoutInflater().inflate(R.layout.picker_view, null);
+
+                PickerView pickerView = (PickerView) view.findViewById(R.id.time_picker_view);
+                pickerView.setData(data);
+
+                final AlertDialog builder = new AlertDialog.Builder(EditUmbrellaActivity.this).create();
+                builder.setView(view);
+                builder.show();
+                pickerView.setOnSelectListener(new PickerView.onSelectListener() {
+                    @Override
+                    public void onSelect(String text) {
+                        time.setText(text);
+                        builder.dismiss();
+                    }
+                });
+            }
+        });
+    }
 }
+
