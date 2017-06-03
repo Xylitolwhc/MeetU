@@ -25,6 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:gravity="center"
+            android:id="@+id/alert_dialog_text"
             android:text="真的要取消吗？"
             android:textColor="@color/FontColorDefault" />
 

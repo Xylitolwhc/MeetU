@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_add_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/MessageBoy"
-    android:id="@+id/activity_add_background"
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:id="@+id/activity_add_Title_BackButton"
+        android:layout_width="18dp"
+        android:layout_height="20dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="22dp"
-        android:background="#AAA" />
+        android:background="@drawable/returna" />
 
     <ImageView
         android:id="@+id/activity_add_Title_ImageView"
@@ -25,13 +26,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
 
-        <ImageView
-            android:id="@+id/activity_add_sex"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="center"
-            android:background="#AAA"
-            android:visibility="visible" />
+        <LinearLayout
+            android:id="@+id/activity_add_helperlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        </LinearLayout>
 
         <RelativeLayout
             android:id="@+id/activity_add_RelativeLayout"
@@ -47,19 +49,19 @@
                 android:src="@drawable/addboy" />
 
             <ImageView
+                android:id="@+id/activity_add_addgirl"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="28dp"
-                android:id="@+id/activity_add_addgirl"
                 android:layout_toLeftOf="@id/center_boy_img"
                 android:src="@drawable/addgirl" />
 
             <ImageView
+                android:id="@+id/activity_add_addsecret"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_gravity="center"
-                android:id="@+id/activity_add_addsecret"
                 android:layout_marginLeft="28dp"
                 android:layout_toRightOf="@id/center_boy_img"
                 android:src="@drawable/addsecretc" />
@@ -111,7 +113,7 @@
             android:layout_width="264dp"
             android:layout_height="64dp"
             android:layout_gravity="center"
-            android:hint="可以随便写两句话，大概在100字以内"
+            android:hint="可以随便写两句话，大概在50字以内"
             android:textSize="12sp"
             android:visibility="visible" />
 
@@ -119,18 +121,56 @@
             android:id="@+id/activity_add_TextView"
             android:layout_width="264dp"
             android:layout_height="64dp"
-            android:gravity="center"
+            android:layout_gravity="center"
             android:textSize="12sp"
+            android:text="ta什么都没说哦"
+            android:gravity="center"
+            android:textColor="@color/white"
             android:visibility="visible" />
     </FrameLayout>
 
-    <Button
-        android:id="@+id/activity_add_Button"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="184dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/button_middle"
-        android:text="点击求伞OvO" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/activity_add_Button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="184dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_middle"
+            android:visibility="invisible"
+            android:text="点击求伞OvO" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/activity_add_ButtonLayout"
+            android:gravity="center">
+            <Button
+                android:id="@+id/activity_add_Button_Meet"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="154dp"
+                android:layout_height="68dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_middle"
+                android:textColor="@color/TabSelected"
+                android:text="碰面啦" />
+
+            <Button
+                android:id="@+id/activity_add_Button_Cancel"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="94dp"
+                android:layout_height="58dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/addunder"
+                android:textColor="@color/MessageBoy"
+                android:text="放弃" />
+        </LinearLayout>
+    </FrameLayout>
 </LinearLayout>

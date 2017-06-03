@@ -1,6 +1,7 @@
 package com.hackday.play;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
@@ -22,6 +23,7 @@ import com.baidu.mapapi.map.MyLocationData;
 import com.hackday.play.Adapters.MyFragAdapter;
 import com.hackday.play.Fragments.MyFragment;
 import com.hackday.play.Fragments.SquareFragment;
+import com.hackday.play.Utils.LocationInfor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,10 +62,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "I konw!", Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
+                Intent intent=new Intent();
+                intent.setClass(MainActivity.this,EditUmbrellaActivity.class);
+                MyApplication.setLocationInfor(new LocationInfor());
+                intent.putExtra("Mode",1);
+                startActivity(intent);
             }
         });
         dialog.show();
-
     }
 
     private void init2() {
