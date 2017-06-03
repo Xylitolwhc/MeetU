@@ -29,6 +29,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".EditUmbrellaActivity"/>
+        <service android:name=".NotificitionService"/>
     </application>
 
 </manifest>

@@ -69,11 +69,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        dialog.show();
-    }
-
-    private void init2() {
-
+//        dialog.show();
+        startService(new Intent(MainActivity.this,NotificitionService.class));
     }
 
     private void init() {
