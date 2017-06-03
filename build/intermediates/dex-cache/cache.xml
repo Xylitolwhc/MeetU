@@ -21,15 +21,29 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/victor/.android/build-cache/77720a7872a84215017156843a212485092fdf29/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b103ffdb1ea66ef418498be15fb9d2c19c8d98d0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/victor/.android/build-cache/feb5f0ecd3988fbde3cea28d145e1109380277b5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_68138675c6a18dd055008f27500a2510bb9fd366/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/victor/Ok/MeetU/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-<<<<<<< HEAD
-        sha1="77169d5d25ede63bd48e189578f4c7a4f57b1a32">
-=======
-        sha1="fb067781abeacd2c744d92dd26015d4386ee9402">
->>>>>>> master
+        sha1="a7b4997755e452364070db7364ac4b657f555343">
         <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_43aa978047cb539679bd81741b645998b40d637d/classes.dex" />
     </item>
 
