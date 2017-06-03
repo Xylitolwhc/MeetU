@@ -1,5 +1,6 @@
 package com.hackday.play;
 
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,11 @@ import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.MyLocationData;
 import com.hackday.play.Adapters.MyFragAdapter;
+import com.hackday.play.Fragments.MyFragment;
+import com.hackday.play.Fragments.SquareFragment;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,13 +33,19 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private MyFragAdapter myFragAdapter;
+    private List<Fragment> fragmentList=new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         viewPager=(ViewPager) findViewById(R.id.mViewPager);
-
+        SquareFragment fragment=new SquareFragment();
+        fragmentList.add(fragment);
+        MyFragment myFragment=new MyFragment();
+        fragmentList.add(myFragment);
+        myFragAdapter=new MyFragAdapter(getSupportFragmentManager(),fragmentList);
+        viewPager.setAdapter(myFragAdapter);
     }
     private void init2(){
 

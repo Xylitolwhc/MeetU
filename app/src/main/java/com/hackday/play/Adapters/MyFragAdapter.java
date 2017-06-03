@@ -20,7 +20,7 @@ public class MyFragAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int i) {
-        return null;
+        return frags.get(i);
     }
 
     @Override
