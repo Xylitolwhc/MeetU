@@ -58,7 +58,7 @@ public class MyRecyAdapter extends RecyclerView.Adapter<MyRecyAdapter.mViewHolde
                     Context context = MyApplication.getContext();
                     Intent intent=new Intent();
                     intent.setClass(context,EditUmbrellaActivity.class);
-                    intent.putExtra("mode",1);
+                    intent.putExtra("Mode",1);
                     context.startActivity(intent);
                 }
             });
