@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/MessageBoy"
+    android:id="@+id/activity_add_background"
     android:orientation="vertical">
 
     <ImageView
@@ -13,15 +14,24 @@
         android:background="#AAA" />
 
     <ImageView
+        android:id="@+id/activity_add_Title_ImageView"
         android:layout_width="248dp"
         android:layout_height="112dp"
         android:layout_gravity="center"
-        android:background="#AAA" />
+        android:src="@drawable/add_banner_secret" />
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/activity_add_sex"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:background="#AAA"
+            android:visibility="visible" />
 
         <RelativeLayout
             android:id="@+id/activity_add_RelativeLayout"
@@ -34,33 +44,36 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_centerHorizontal="true"
-                android:background="#AAA" />
+                android:src="@drawable/addboy" />
 
             <ImageView
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="28dp"
+                android:id="@+id/activity_add_addgirl"
                 android:layout_toLeftOf="@id/center_boy_img"
-                android:background="#AAA" />
+                android:src="@drawable/addgirl" />
 
             <ImageView
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_gravity="center"
+                android:id="@+id/activity_add_addsecret"
                 android:layout_marginLeft="28dp"
                 android:layout_toRightOf="@id/center_boy_img"
-                android:background="#AAA" />
+                android:src="@drawable/addsecretc" />
         </RelativeLayout>
 
-        <ImageView
-            android:id="@+id/activity_add_sex"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="center"
-            android:background="#AAA"
-            android:visibility="visible" />
+
     </FrameLayout>
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/iconplace32" />
 
     <TextView
         android:layout_width="match_parent"
@@ -68,23 +81,26 @@
         android:layout_margin="10dp"
         android:gravity="center"
         android:text="你在哪儿呢？"
-        android:textColor="@color/black" />
+        android:textColor="@color/white"
+        android:textSize="12sp" />
 
     <ImageView
+        android:id="@+id/activity_add_time_ImageView"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:background="#AAA" />
+        android:src="@drawable/icontime32" />
 
     <TextView
         android:id="@+id/activity_add_time"
-        android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:clickable="true"
         android:gravity="center"
-        android:text="10分钟" />
+        android:text="10分钟"
+        android:textColor="@color/white" />
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -115,6 +131,6 @@
         android:layout_height="48dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:background="#AAA"
+        android:background="@drawable/button_middle"
         android:text="点击求伞OvO" />
 </LinearLayout>
