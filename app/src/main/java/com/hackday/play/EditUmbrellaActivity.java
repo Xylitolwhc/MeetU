@@ -63,7 +63,7 @@ public class EditUmbrellaActivity extends Activity {
         locationInfor = MyApplication.getLocationInfor();
         if (getIntent().getIntExtra("Mode", 0) == 0) {//编辑、发布模式
             textView.setVisibility(View.INVISIBLE);
-            relativeLayout.setVisibility(View.INVISIBLE);
+            imageView.setVisibility(View.INVISIBLE);
             button.setText("点击求帮助OvO");
             View.OnClickListener listener = new View.OnClickListener() {
                 @Override
@@ -128,7 +128,7 @@ public class EditUmbrellaActivity extends Activity {
             if (locationInfor == null) finish();
             textView.setVisibility(View.INVISIBLE);
             time.setClickable(false);
-            imageView.setVisibility(View.INVISIBLE);
+            relativeLayout.setVisibility(View.INVISIBLE);
             if (locationInfor.getId() == MyApplication.getId()) {
                 button.setText("删除");
                 button.setOnClickListener(new View.OnClickListener() {
