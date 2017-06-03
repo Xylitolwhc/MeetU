@@ -1,6 +1,7 @@
 package com.hackday.play;
 
 import android.location.LocationListener;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,10 +25,21 @@ public class MainActivity extends AppCompatActivity {
     private MyLocationData locationData;
     private BDLocationListener listener;
     private static final String TAG = "MainActivity";
+
+    private ViewPager viewPager;
+    private MyFragAdapter myFragAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        viewPager=(ViewPager) findViewById(R.id.mViewPager);
+
+    }
+    private void init2(){
+
+    }
+    private void init(){
         mapView = (MapView) findViewById(R.id.baidu);
         locationClient = new LocationClient(getApplicationContext());
         LocationClientOption option = new LocationClientOption();
@@ -36,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         option.setCoorType("bd09ll");
         //可选，默认gcj02，设置返回的定位结果坐标系
 
-        int span=1000;
+        int span = 1000;
         option.setScanSpan(span);
         //可选，默认0，即仅定位一次，设置发起定位请求的间隔需要大于等于1000ms才是有效的
 
@@ -64,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         option.setEnableSimulateGps(false);
         //可选，默认false，设置是否需要过滤GPS仿真结果，默认需要
 
-       locationClient.setLocOption(option);
+        locationClient.setLocOption(option);
         listener = new BDLocationListener() {
             @Override
             public void onReceiveLocation(BDLocation bdLocation) {
@@ -95,4 +107,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    }
+}
