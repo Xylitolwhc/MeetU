@@ -1,10 +1,15 @@
 package com.hackday.play;
 
+import android.content.DialogInterface;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
@@ -33,24 +38,39 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private MyFragAdapter myFragAdapter;
-    private List<Fragment> fragmentList=new ArrayList<>();
+    private List<Fragment> fragmentList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        viewPager=(ViewPager) findViewById(R.id.mViewPager);
-        SquareFragment fragment=new SquareFragment();
+        viewPager = (ViewPager) findViewById(R.id.mViewPager);
+        SquareFragment fragment = new SquareFragment();
         fragmentList.add(fragment);
-        MyFragment myFragment=new MyFragment();
+        MyFragment myFragment = new MyFragment();
         fragmentList.add(myFragment);
-        myFragAdapter=new MyFragAdapter(getSupportFragmentManager(),fragmentList);
+        myFragAdapter = new MyFragAdapter(getSupportFragmentManager(), fragmentList);
         viewPager.setAdapter(myFragAdapter);
-    }
-    private void init2(){
+
+        View view=getLayoutInflater().inflate(R.layout.alert_dialog, null);
+        Button positive=(Button) view.findViewById(R.id.dialog_positive);
+        final AlertDialog dialog=new AlertDialog.Builder(this).setView(view).setCancelable(false).create();
+        positive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "I konw!", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
 
     }
-    private void init(){
+
+    private void init2() {
+
+    }
+
+    private void init() {
         mapView = (MapView) findViewById(R.id.baidu);
         locationClient = new LocationClient(getApplicationContext());
         LocationClientOption option = new LocationClientOption();
