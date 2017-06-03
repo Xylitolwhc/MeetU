@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hackday.play.Utils.LocationInfor;
 
@@ -157,5 +159,30 @@ public class EditUmbrellaActivity extends Activity {
                 });
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+    }
+    private void showDialog(){
+        View view=getLayoutInflater().inflate(R.layout.alert_dialog2, null);
+        Button positive=(Button) view.findViewById(R.id.alert_dialog_positive)
+                ,negative=(Button) view.findViewById(R.id.alert_dialog_negative);
+        final AlertDialog dialog=new AlertDialog.Builder(this).setView(view).setCancelable(true).create();
+        positive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        negative.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 }
