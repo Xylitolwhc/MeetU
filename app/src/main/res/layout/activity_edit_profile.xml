@@ -43,8 +43,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="14dp"
             android:text="ID"
+            android:layout_centerVertical="true"
             android:textColor="@color/blue"
             android:textSize="14sp" />
 
@@ -53,8 +53,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="40dp"
-            android:layout_marginTop="14dp"
             android:text="NO.001"
+            android:layout_centerVertical="true"
             android:textColor="@color/blue"
             android:textSize="14sp" />
     </RelativeLayout>
@@ -71,8 +71,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="14dp"
             android:text="昵称"
+            android:layout_centerVertical="true"
             android:textColor="@color/blue"
             android:textSize="14sp" />
 
@@ -81,8 +81,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="40dp"
-            android:layout_marginTop="14dp"
             android:background="@null"
+            android:layout_centerVertical="true"
             android:id="@+id/edit_name"
             android:cursorVisible="false"
             android:text="第一个没名字的"
@@ -102,8 +102,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="14dp"
             android:text="手机号"
+            android:layout_centerVertical="true"
             android:textColor="@color/blue"
             android:textSize="14sp" />
 
@@ -112,8 +112,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="40dp"
-            android:layout_marginTop="14dp"
             android:background="@null"
+            android:layout_centerVertical="true"
             android:id="@+id/edit_phone"
             android:cursorVisible="false"
             android:text="1888909289"
@@ -132,8 +132,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="14dp"
             android:text="qq"
+            android:layout_centerVertical="true"
             android:textColor="@color/blue"
             android:textSize="14sp" />
 
@@ -142,8 +142,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="40dp"
-            android:layout_marginTop="14dp"
             android:background="@null"
+            android:layout_centerVertical="true"
             android:id="@+id/edit_qq"
             android:cursorVisible="false"
             android:text="235342234"
@@ -162,7 +162,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="14dp"
+            android:layout_centerVertical="true"
             android:text="定位"
             android:textColor="@color/blue"
             android:textSize="14sp" />
@@ -172,7 +172,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="40dp"
-            android:layout_marginTop="14dp"
+            android:layout_centerVertical="true"
             android:background="@null"
             android:id="@+id/edit_location"
             android:cursorVisible="false"
@@ -184,7 +184,7 @@
         android:layout_width="160dp"
         android:layout_height="40dp"
         android:layout_marginTop="560dp"
-        android:layout_marginLeft="100dp"
+        android:layout_centerHorizontal="true"
         android:text="确认修改"
         android:id="@+id/confirm_edit"
         android:textColor="@color/white"

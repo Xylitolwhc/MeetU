@@ -12,6 +12,7 @@ import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.model.LatLng;
 import com.hackday.play.R;
 import com.hackday.play.Utils.LocationInfor;
+import com.hackday.play.Utils.MyActivityManager;
 import com.hackday.play.Utils.Utils;
 
 public class MapActivity extends AppCompatActivity {
@@ -34,6 +35,7 @@ public class MapActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+        MyActivityManager.getInstance().pushActivity(MapActivity.this);
         mapView = (MapView) findViewById(R.id.baidu_map);
         baiduMap = mapView.getMap();
         infor = new LocationInfor();

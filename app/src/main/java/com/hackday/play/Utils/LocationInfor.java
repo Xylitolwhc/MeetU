@@ -7,10 +7,32 @@ import org.litepal.crud.DataSupport;
  */
 
 public class LocationInfor extends DataSupport {
+    public static int NEED_ED = 3;
+    public static int IS_SHARING = 2;
+    public static int COMPLETED = 1;
     private String time;
+    private float acuurancy;
+    private String name;
+    private int sex;
+    private String building;
+    private String addr;
+    private double longtitude;
+    private double latitude;
 
+    private String detail;
+    private String id;
+    private String specific_infor;
     private String qq;
     private String phone;
+    private int status;
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
     public String getQq() {
         return qq;
@@ -71,17 +93,7 @@ public class LocationInfor extends DataSupport {
         return acuurancy;
     }
 
-    private float acuurancy;
-    private String name;
-    private int sex;
-    private String building;
-    private String addr;
-    private double longtitude;
-    private double latitude;
 
-    private String detail;
-    private String id;
-    private String specific_infor;
 
     public void setSpecific_infor(String specific_infor) {
         this.specific_infor = specific_infor;

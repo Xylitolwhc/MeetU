@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.hackday.play.EditUmbrellaActivity;
+import com.hackday.play.View.EditUmbrellaActivity;
 import com.hackday.play.MyApplication;
 import com.hackday.play.R;
 import com.hackday.play.Utils.LocationInfor;
@@ -33,7 +33,8 @@ public class MyRecyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     private ProgressBar pbLoading;
     private TextView tvLoadMore;
     private Context context;
-    public MyRecyAdapter(List<LocationInfor> locationInforList,Context context) {
+
+    public MyRecyAdapter(List<LocationInfor> locationInforList, Context context) {
         if (locationInforList != null)
             this.locationInforList = locationInforList;
         this.context = context;
@@ -49,7 +50,7 @@ public class MyRecyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         mViewHolder holder;
         if (i == CONTENT_TYPE)
             return new mViewHolder(LayoutInflater.from(MyApplication.getContext()).inflate(R.layout.frag_square_item, viewGroup, false), i);
-        else if (i ==EMPTY_TYPE) {
+        else if (i == EMPTY_TYPE) {
             return new mViewHolder(LayoutInflater.from(MyApplication.getContext()).inflate(R.layout.item_empty, viewGroup, false), i);
         } else if (i == FOOT_TYPE) {
             return new FooterViewHolder(LayoutInflater.from(MyApplication.getContext()).inflate(R.layout.list_footer, viewGroup, false));
@@ -65,21 +66,34 @@ public class MyRecyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         if (type == CONTENT_TYPE) {
             if (locationInforList.size() != 0) {
                 LocationInfor locationInfor = locationInforList.get(i);
-                ((mViewHolder)mViewHolder).location.setText(locationInfor.getBuilding());
-                ((mViewHolder)mViewHolder).remain_time.setText(locationInfor.getTime());
-                ((mViewHolder)mViewHolder).cardView.setOnClickListener(new View.OnClickListener() {
+                ((mViewHolder) mViewHolder).location.setText(locationInfor.getBuilding());
+                ((mViewHolder) mViewHolder).remain_time.setText(locationInfor.getTime());
+                ((mViewHolder)mViewHolder).title.setText(locationInfor.getDetail());
+                ((mViewHolder) mViewHolder).cardView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent=new Intent();
-                        intent.setClass(context,EditUmbrellaActivity.class);
-                        intent.putExtra("Mode",1);
+                        Intent intent = new Intent();
+                        intent.setClass(context, EditUmbrellaActivity.class);
+                        intent.putExtra("Mode", 1);
                         context.startActivity(intent);
                     }
                 });
+                switch (locationInfor.getSex()) {
+                    case 0:
+                        ((mViewHolder) mViewHolder).cardView.setBackgroundColor(context.getResources().getColor(R.color.MessageSecret));
+                        break;
+                    case 1:
+                        ((mViewHolder) mViewHolder).cardView.setBackgroundColor(context.getResources().getColor(R.color.MessageBoy));
+                        break;
+                    case -1:
+                        ((mViewHolder) mViewHolder).cardView.setBackgroundColor(context.getResources().getColor(R.color.MessageGirl));
+                        break;
+                }
+
             }
 
         } else if (type == EMPTY_TYPE) {
-            ((mViewHolder)mViewHolder).title.setText("暂时没有内容哦");
+            ((mViewHolder) mViewHolder).title.setText("暂时没有内容哦");
         } else if (type == FOOT_TYPE) {
             pbLoading = ((FooterViewHolder) mViewHolder).pbLoading;
             tvLoadMore = ((FooterViewHolder) mViewHolder).tvLoadMore;
@@ -88,12 +102,12 @@ public class MyRecyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     @Override
     public int getItemViewType(int position) {
-        if (locationInforList.size() != 0)
-            return CONTENT_TYPE;
-        else if (position + 1 == getItemCount()) {
-            return FOOT_TYPE;
-        }else
+        if (locationInforList.size() == 0)
             return EMPTY_TYPE;
+        else if (position  == getItemCount()) {
+            return FOOT_TYPE;
+        } else
+            return CONTENT_TYPE;
     }
 
     @Override
@@ -112,6 +126,7 @@ public class MyRecyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             tvLoadMore.setVisibility(View.GONE);
         }
     }
+
     /**
      * 显示上拉加载的文字，当数据加载完毕，调用该方法，隐藏进度条，显示“上拉加载更多”
      */
@@ -125,18 +140,21 @@ public class MyRecyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     class FooterViewHolder extends RecyclerView.ViewHolder {
         private TextView tvLoadMore;
         private ProgressBar pbLoading;
+
         public FooterViewHolder(View itemView) {
             super(itemView);
             tvLoadMore = (TextView) itemView.findViewById(R.id.tv_item_footer_load_more);
             pbLoading = (ProgressBar) itemView.findViewById(R.id.pb_item_footer_loading);
         }
     }
+
     class mViewHolder extends RecyclerView.ViewHolder {
         protected TextView remain_time, location, title;
         protected ImageView avatar;
 
         protected CardView cardView;
-         public mViewHolder(View itemView, int type) {
+
+        public mViewHolder(View itemView, int type) {
             super(itemView);
             if (type != 1) {
                 avatar = (ImageView) itemView.findViewById(R.id.item_avatar);

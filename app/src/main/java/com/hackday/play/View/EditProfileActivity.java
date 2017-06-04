@@ -3,7 +3,6 @@ package com.hackday.play.View;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.transition.Visibility;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +12,9 @@ import android.widget.RelativeLayout;
 
 import com.hackday.play.MyApplication;
 import com.hackday.play.R;
+import com.hackday.play.Utils.GlobaData;
 import com.hackday.play.Utils.LocationInfor;
+import com.hackday.play.Utils.MyActivityManager;
 import com.hackday.play.Utils.Utils;
 
 public class EditProfileActivity extends AppCompatActivity {
@@ -43,7 +44,7 @@ public class EditProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
-
+        MyActivityManager.getInstance().pushActivity(EditProfileActivity.this);
        InitView();
         InitEvent();
     }
@@ -105,6 +106,11 @@ public class EditProfileActivity extends AppCompatActivity {
                 locationInfor.setQq(qq);
                 locationInfor.setPhone(phone);
                 MyApplication.setLocationInfor(locationInfor);
+                Utils.putValue(EditProfileActivity.this, GlobaData.NAME, name);
+                Utils.putValue(EditProfileActivity.this, GlobaData.QQ, qq);
+                Utils.putValue(EditProfileActivity.this, GlobaData.PHONE, phone);
+                Utils.putBooleanValue(EditProfileActivity.this,GlobaData.IS_EDITED,true);
+
                 finish();
             }
         });

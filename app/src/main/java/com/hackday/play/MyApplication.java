@@ -8,6 +8,9 @@ import android.os.Message;
 import com.baidu.mapapi.SDKInitializer;
 import com.hackday.play.Utils.LocationInfor;
 
+import org.litepal.LitePal;
+import org.litepal.parser.LitePalConfig;
+
 /**
  * Created by victor on 17-6-3.
  */
@@ -52,6 +55,7 @@ public class MyApplication extends Application{
         context = getApplicationContext();
         SDKInitializer.initialize(this);
         locationInfor = new LocationInfor();
+        LitePal.initialize(context);
     }
 
     public static Context getContext() {

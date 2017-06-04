@@ -2,22 +2,22 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/home/victor/Ok/MeetU/app/libs/BaiduLBS_Android.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/home/victor/.android/build-cache/fb1b65c49cd4a24b5797865a2a7702a9972f1418/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="956bcbf7c2cc5827cc9ef339d7b8a9701c76ece4">
-        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/transforms/dex/debug/folders/1000/2/BaiduLBS_Android_6fa59f8549e0db445ae13eeea2b8d7cd6e4f059b/classes.dex" />
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/classes_f1c1f6c57f2f86968714b0858baa9ce7d7be4c6a.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/victor/Ok/MeetU/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/home/victor/.android/build-cache/77720a7872a84215017156843a212485092fdf29/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
-        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_bad82366007e1ba8dda95cd0d941062399a0aba9/classes.dex" />
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/classes_b103ffdb1ea66ef418498be15fb9d2c19c8d98d0.jar" />
     </item>
     <item
         is-multidex="true"
@@ -29,6 +29,33 @@
         <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b103ffdb1ea66ef418498be15fb9d2c19c8d98d0/classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="/home/victor/.android/build-cache/f5718943a8c306ee735f96bd87553f4c0088d441/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/classes_82e081031ddd35c97238b550367780035fb841b2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/victor/.android/build-cache/e35c745c8879218f5f1879c8421722e7e8299081/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/classes_61c4f58c84663278c3fe19b7ae1a8dac3a2c18aa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/victor/.android/build-cache/feb5f0ecd3988fbde3cea28d145e1109380277b5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/classes_68138675c6a18dd055008f27500a2510bb9fd366.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/home/victor/.android/build-cache/feb5f0ecd3988fbde3cea28d145e1109380277b5/output/jars/classes.jar"
         jumboMode="true"
@@ -38,13 +65,166 @@
         <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_68138675c6a18dd055008f27500a2510bb9fd366/classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="/home/victor/.android/build-cache/8252bf5185c9b2e024016bff167a560f5720af4a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/classes_bbfacf74b7aa9c25b002334abd66e56277f11420.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/victor/Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/constraint-layout-solver-1.0.2_347da58ba476d9f5e0bddb89d26facc9367c072e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/victor/Ok/MeetU/app/libs/BaiduLBS_Android.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="956bcbf7c2cc5827cc9ef339d7b8a9701c76ece4">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/transforms/dex/debug/folders/1000/2/BaiduLBS_Android_6fa59f8549e0db445ae13eeea2b8d7cd6e4f059b/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/victor/.android/build-cache/45aa82bd597698db276b1e50b10c1ab935ab22d2/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/classes_793a39a026dcb2847e0aadc2f2f043c12754ad94.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/victor/.android/build-cache/aeb9d88539bfe4a3e71c2a547b6fa689747b6f1e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/classes_b7d034a364c0ae786a6ab6ba1e6d20379150989a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/victor/.android/build-cache/353152459b9d44a499e69bc8bc79bdf493dcdfdb/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/classes_b5a8e2268fbd9680aa352162c8356dc59284e6b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/victor/Ok/MeetU/app/libs/BaiduLBS_Android.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="956bcbf7c2cc5827cc9ef339d7b8a9701c76ece4">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/BaiduLBS_Android_6fa59f8549e0db445ae13eeea2b8d7cd6e4f059b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/victor/.android/build-cache/de73e896bbb7f460cfe924a501b2a373c42f86dc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="db185f06215220526d21bbf467cae061956cc185">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/classes_e9acee3af080af2c97bfc16984a205f47902aa3a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/victor/.android/build-cache/65f940f46af13f9ff31fb227eaf42a9080512851/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/classes_101c0585aea73ed0dda1a75c053fdb03a174ee4f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/victor/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/okio-1.13.0_a25f11e0e05315d980cbe93d4c7d86f269c51916.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/victor/.android/build-cache/84c7f2ad7610f6dcb8734f5877dc3075870640c6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/classes_dc73cf19b011964ea6f1182f3124d66312e95d59.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/victor/Ok/MeetU/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_bad82366007e1ba8dda95cd0d941062399a0aba9/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/victor/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.8.0/5a11f020cce2d11eb71ba916700600e18c4547e7/okhttp-3.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5a11f020cce2d11eb71ba916700600e18c4547e7">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/okhttp-3.8.0_7084f8629488d8f599815cae8a30845319e0c385.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/victor/.android/build-cache/d1cb522773c1fdf28becf46cf6a27022ed76ed63/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/classes_49da20acf78a9a30960fdeb34166119e29d858ac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/victor/.android/build-cache/2f011f593529a05a5261afb70b7ad0a22a040959/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/classes_ee621b259be2e6059b6f5d080abf1f441afe6128.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/home/victor/Ok/MeetU/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="a7b4997755e452364070db7364ac4b657f555343">
+        sha1="bc4564dafef475bd04ba9910fcddd658776979d2">
         <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_43aa978047cb539679bd81741b645998b40d637d/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/victor/.android/build-cache/cee93d865b918d64504e6dc8767523ee55b02e17/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/classes_b6234aca8bdb93aa9aaeaa04c6da3d8c2e4b3cff.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/victor/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/home/victor/Ok/MeetU/app/build/intermediates/pre-dexed/release/support-annotations-25.3.1_0af569dd1800fad08b790616cfd517763fc4935a.jar" />
     </item>
 
 </items>
